@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ESSC v.1.0</title>
+<style type="text/css">
+    body {
+        width: 100%;
+        height: 100%;
+        background-color:#202020;
+    }
+    div {
+        position:absolute;
+        height:100%;
+        width:100%;
+        display: table;
+    }
+    h1 {
+        display: table-cell;
+        vertical-align: middle;
+        text-align:center;
+        color:#FFFFFF;
+    }
+</style>
+<script type="text/javascript">
+    var bridge = new WebOSServiceBridge();
+    function test(){
+        url = "luna://com.example.service.native/hello";
+        param = '{}';
+        bridge.onservicecallback = function(m){
+            var response = JSON.parse(m);
+            document.getElementById('status').innerHTML = response.answer;
+        }
+        bridge.call(url, param);
+    }
+    function forward(){
+        url = "luna://com.app.rora.service.carcontrol/forward";
+        param = '{"speed":""}';
+        bridge.onservicecallback = function(){
+            document.getElementById('status').innerHTML = "Go!";
+        }
+        bridge.call(url, param);
+    }
+
+    function backward(){
+        url = "luna://com.app.rora.service.carcontrol/backward";
+        param = '{"speed":""}';
+        bridge.onservicecallback = function(){
+            document.getElementById('status').innerHTML = "Back!";
+        }
+        bridge.call(url, param);
+    }
+
+    function right(){
+        url = "luna://com.app.rora.service.carcontrol/right";
+        param = '{"speed":""}';
+        bridge.onservicecallback = function(){
+            document.getElementById('status').innerHTML = "Right!";
+        }
+        bridge.call(url, param);
+    }
+
+    function left(){
+        url = "luna://com.app.rora.service.carcontrol/left";
+        param = '{"speed":""}';
+        bridge.onservicecallback = function(){
+            document.getElementById('status').innerHTML = "Left!";
+        }
+        bridge.call(url, param);
+    }
+
+    function stop(){
+        url = "luna://com.app.rora.service.carcontrol/stop";
+        param = '{"speed":""}';
+        bridge.onservicecallback = function(){
+            document.getElementById('status').innerHTML = "Stop!";
+        }
+        bridge.call(url, param);
+    }
+
+</script>
+</head>
+<body>
+    <div>
+        <h1 id="txt_msg">application console</h1>
+        <input type="button" id="test" onclick="test();" value="test">
+        <input type="button" id="forward" onclick="forward();" value="Go">
+        <input type="button" id="forward" onclick="backward();" value="Back">
+        <input type="button" id="forward" onclick="right();" value="Right">
+        <input type="button" id="forward" onclick="left();" value="Left">
+        <input type="button" id="forward" onclick="stop();" value="Stop">
+        <b> STATUS : </b> <p id="status"> wait!
+    </div>
+</body>
+</html>
