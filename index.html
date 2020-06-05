@@ -32,6 +32,13 @@
         }
         bridge.call(url, param);
     }
+
+    function loadWebcontrol(){
+        url = "luna://com.app.rora.service.webcontrol/hello";
+        param = '{"name":""}';
+        bridge.call(url, param);
+    }
+
     function forward(){
         url = "luna://com.app.rora.service.carcontrol/forward";
         param = '{"speed":""}';
@@ -79,7 +86,7 @@
 
 </script>
 </head>
-<body>
+<body onload="loadWebcontrol();">
     <div>
         <h1 id="txt_msg">application console</h1>
         <input type="button" id="test" onclick="test();" value="test">
