@@ -4,7 +4,7 @@
   "vendor": "Rora",
   "type": "web",
   "main": "index.html",
-  "title": "essc",
+  "title": "JARVIS",
   "icon": "icon.png",
   "requiredPermissions": [
     "time",
