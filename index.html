@@ -24,11 +24,11 @@
 <script type="text/javascript">
     var bridge = new WebOSServiceBridge();
     function test(){
-        url = "luna://com.example.service.native/hello";
-        param = '{}';
+        url = "luna://com.webos.service.tts/speak";
+        param = '{"text": "test message", "clear":true, "appID":"com.app.rora"}';
         bridge.onservicecallback = function(m){
             var response = JSON.parse(m);
-            document.getElementById('status').innerHTML = response.answer;
+            document.getElementById('status').innerHTML = response.returnValue;
         }
         bridge.call(url, param);
     }
@@ -88,7 +88,8 @@
         <input type="button" id="forward" onclick="right();" value="Right">
         <input type="button" id="forward" onclick="left();" value="Left">
         <input type="button" id="forward" onclick="stop();" value="Stop">
-        <b> STATUS : </b> <p id="status"> wait!
+        <b> STATUS : </b> 
+            <p id="status"> wait!</p>
     </div>
 </body>
 </html>

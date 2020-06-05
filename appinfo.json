@@ -1,7 +1,7 @@
 {
   "id": "com.app.rora",
-  "version": "1.0.0",
-  "vendor": "My Company",
+  "version": "1.0.1",
+  "vendor": "Rora",
   "type": "web",
   "main": "index.html",
   "title": "essc",
@@ -9,8 +9,9 @@
   "requiredPermissions": [
     "time",
     "settings.read",
-    "com.example.service.native.group",
     "com.app.rora.service.carcontrol.group",
+    "tts",
+    "tts.internal",
     "activities.manage"
   ]
 }
