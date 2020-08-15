@@ -1,0 +1,2 @@
+ls-monitor -i com.app.rora.service.biometrics
+ls-monitor -i com.app.rora.service.webcontrol
