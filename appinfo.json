@@ -10,6 +10,7 @@
     "time",
     "settings.read",
     "com.app.rora.service.carcontrol.group",
+    "com.app.rora.service.webcontrol.group",
     "tts",
     "tts.internal",
     "activities.manage"
