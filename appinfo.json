@@ -13,6 +13,9 @@
     "com.app.rora.service.webcontrol.group",
     "tts",
     "tts.internal",
-    "activities.manage"
+    "activities.manage",
+    "activities.callbacks",
+    "notifications.manage",
+    "notifications"
   ]
 }
