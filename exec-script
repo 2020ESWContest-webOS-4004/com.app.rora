@@ -1,2 +1,4 @@
+# This is the script that webOS should run once booted up.
+
 ls-monitor -i com.app.rora.service.biometrics
 ls-monitor -i com.app.rora.service.webcontrol
