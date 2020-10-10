@@ -5,7 +5,7 @@
 ## 개발 PC에서 install
 ### 1. JARVIS App(서비스 포함) 소스코드 다운로드
 ```
-git clone https://github.com/skhu-rora/com.app.rora.git && git clone https://github.com/skhu-rora/com.app.rora.service.biometrics.git && git clone https://github.com/skhu-rora/com.app.rora.service.carcontrol.git && git clone https://github.com/skhu-rora/com.app.rora.service.webcontrol.git
+git clone https://github.com/2020ESWContest-webOS-4004/com.app.rora.git && git clone https://github.com/2020ESWContest-webOS-4004/com.app.rora.service.biometrics.git && git clone https://github.com/2020ESWContest-webOS-4004/com.app.rora.service.carcontrol.git && git clone https://github.com/2020ESWContest-webOS-4004/com.app.rora.service.webcontrol.git
 ```
 
 ### 1.2. Node.js 패키지 설치
